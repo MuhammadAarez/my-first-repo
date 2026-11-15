@@ -1,0 +1,290 @@
+[gd_scene format=3 uid="uid://dc5udkrxfccli"]
+
+[ext_resource type="Texture2D" uid="uid://bs2edcdwm8d33" path="res://scenes/IMG-20261114-WA5173.jpg" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://c7cby7w4l2sdj" path="res://game.gd" id="1_e2o6t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2o6t"]
+bg_color = Color(0, 0.56940794, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_feb5d"]
+bg_color = Color(4.6205523e-06, 0.7618133, 0.5979189, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fc0e3"]
+bg_color = Color(0.8472311, 0.75158876, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jktm"]
+bg_color = Color(0.5516501, 0, 0.83396184, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0g74i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42ng2"]
+
+[node name="game" type="Control" unique_id=2107528749]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e2o6t")
+metadata/_edit_horizontal_guides_ = [-6688.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=847694675]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 6
+
+[node name="Img20261114Wa5173" type="Sprite2D" parent="TextureRect" unique_id=15028280]
+position = Vector2(576.99994, 324)
+scale = Vector2(0.5615234, 0.5625)
+texture = ExtResource("1_80nbo")
+
+[node name="OUTPOST NOVA" type="Label" parent="." unique_id=455254336]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 1152.0
+offset_bottom = 175.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "OUTPOST NOVA"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=561200394]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 183.0
+offset_right = 704.0
+offset_bottom = 211.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "MARS MISSION CONTROL"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=185215129]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 326.0
+offset_top = 246.0
+offset_right = 794.0
+offset_bottom = 306.0
+focus_neighbor_left = NodePath("OxygenCard/VBoxContainer/OXYGEN")
+theme_override_constants/separation = 35
+
+[node name="OxygenCard" type="PanelContainer" parent="HBoxContainer" unique_id=338958461]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e2o6t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/OxygenCard" unique_id=1199355382]
+layout_mode = 2
+
+[node name="OXYGEN" type="Label" parent="HBoxContainer/OxygenCard/VBoxContainer" unique_id=1745553597]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "○ OXYGEN "
+
+[node name="OxygenBar" type="ProgressBar" parent="HBoxContainer/OxygenCard/VBoxContainer" unique_id=680673100]
+layout_mode = 2
+value = 100.0
+
+[node name="WaterCard" type="PanelContainer" parent="HBoxContainer" unique_id=1466087363]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_feb5d")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/WaterCard" unique_id=1428473696]
+layout_mode = 2
+
+[node name="WATER" type="Label" parent="HBoxContainer/WaterCard/VBoxContainer2" unique_id=718092484]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "💧WATER "
+
+[node name="WaterBar" type="ProgressBar" parent="HBoxContainer/WaterCard/VBoxContainer2" unique_id=2097212077]
+layout_mode = 2
+value = 100.0
+
+[node name="FoodCard" type="PanelContainer" parent="HBoxContainer" unique_id=115797910]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fc0e3")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/FoodCard" unique_id=1883332907]
+layout_mode = 2
+
+[node name="FOOD" type="Label" parent="HBoxContainer/FoodCard/VBoxContainer2" unique_id=440179873]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "🍴FOOD "
+
+[node name="FoodBar" type="ProgressBar" parent="HBoxContainer/FoodCard/VBoxContainer2" unique_id=1647682895]
+layout_mode = 2
+value = 100.0
+
+[node name="ElectricityCard" type="PanelContainer" parent="HBoxContainer" unique_id=1137994429]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7jktm")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/ElectricityCard" unique_id=949849866]
+layout_mode = 2
+
+[node name="ELECTRICITY" type="Label" parent="HBoxContainer/ElectricityCard/VBoxContainer3" unique_id=949207582]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "⚡ELECTRICITY "
+
+[node name="ElectricityBar" type="ProgressBar" parent="HBoxContainer/ElectricityCard/VBoxContainer3" unique_id=1868564478]
+layout_mode = 2
+value = 100.0
+
+[node name="ShieldingCard" type="PanelContainer" parent="HBoxContainer" unique_id=251307021]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/ShieldingCard" unique_id=1169546211]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/ShieldingCard/VBoxContainer" unique_id=889288162]
+layout_mode = 2
+text = "RADIATION SHIELDING"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ShieldingCard/VBoxContainer" unique_id=538578129]
+layout_mode = 2
+text = "SHIELDING LEVEL : 0"
+
+[node name="Label3" type="Label" parent="HBoxContainer/ShieldingCard/VBoxContainer" unique_id=1593321716]
+layout_mode = 2
+text = "Shielding Materials : 3"
+
+[node name="EndDayButton" type="Button" parent="." unique_id=1436744597]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 496.0
+offset_right = 1152.0
+offset_bottom = 563.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 52
+text = "END DAY"
+flat = true
+
+[node name="DayLabel" type="Label" parent="." unique_id=1439250354]
+layout_mode = 0
+offset_left = 917.0
+offset_top = 65.0
+offset_right = 1120.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+text = "MISSION DAY: 1"
+
+[node name="MissionStatusLabel" type="Label" parent="." unique_id=1524531457]
+layout_mode = 0
+offset_left = 743.0
+offset_top = 104.0
+offset_right = 1153.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "MISSION IN PROGRESS"
+
+[node name="BatteryUpgradeButton" type="Button" parent="." unique_id=572456028]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 341.0
+offset_right = 599.0
+offset_bottom = 393.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "CONNECT BATTERY TO THE MAIN (+25)"
+flat = true
+
+[node name="GreenhouseCard" type="PanelContainer" parent="." unique_id=345731311]
+layout_mode = 0
+offset_left = 805.0
+offset_top = 365.0
+offset_right = 1149.0
+offset_bottom = 448.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0g74i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GreenhouseCard" unique_id=556616868]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GreenhouseCard/VBoxContainer" unique_id=1888572701]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "GREENHOUSE"
+
+[node name="Label2" type="Label" parent="GreenhouseCard/VBoxContainer" unique_id=1588052667]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "FOOD PRODUCTION : ACTIVE"
+
+[node name="BatteryCapacity" type="Label" parent="." unique_id=836318306]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 302.0
+offset_right = 242.0
+offset_bottom = 332.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Batteries Left : 10"
+
+[node name="OxygenProductionCard" type="PanelContainer" parent="." unique_id=572695228]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 394.0
+offset_right = 529.0
+offset_bottom = 471.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OxygenProductionCard" unique_id=1798445563]
+layout_mode = 2
+
+[node name="OxygenProduction" type="Label" parent="OxygenProductionCard/VBoxContainer" unique_id=1970471185]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_42ng2")
+text = "OXYGEN PRODUCTION : INACTIVE"
+
+[node name="ProduceOxygen" type="Button" parent="OxygenProductionCard/VBoxContainer" unique_id=1761827015]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "PRODUCE OXYGEN THROUGH ELECTROLYSIS"
+flat = true
+
+[node name="ShieldingUpgradeButton" type="Button" parent="." unique_id=2041261637]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 589.0
+offset_right = 295.0
+offset_bottom = 634.0
+theme_override_font_sizes/font_size = 27
+text = "UPGRADE SHIELDING"
+
+[node name="MineResoucesButton" type="Button" parent="." unique_id=1599455141]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 483.0
+offset_right = 258.0
+offset_bottom = 565.0
+theme_override_font_sizes/font_size = 27
+text = "MINE RESOURCES "
+
+[connection signal="pressed" from="EndDayButton" to="." method="_on_end_day_button_pressed"]
+[connection signal="pressed" from="BatteryUpgradeButton" to="." method="upgrade_battery"]
+[connection signal="pressed" from="OxygenProductionCard/VBoxContainer/ProduceOxygen" to="." method="produce_oxygen_pressed"]
+[connection signal="pressed" from="ShieldingUpgradeButton" to="." method="shielding_pressed"]
+[connection signal="pressed" from="MineResoucesButton" to="." method="mine_resources"]
